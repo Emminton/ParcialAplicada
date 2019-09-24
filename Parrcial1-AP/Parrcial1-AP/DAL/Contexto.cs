@@ -1,23 +1,20 @@
-﻿using System;
-using RegistroEstudiante.Entidades;
+﻿using Parrcial1_AP.BLL;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Entity;
 
-namespace RegistroEstudiante.DAL
+namespace Parrcial1_AP.DAL
 {
-    //heredamos de DbContext para que entEntityframework pueda hacer su amiga
     public class Contexto : DbContext
-    {
-        public DbSet<Estudiante> estudiante { get; set; }
+    {  
+            public DbSet<Estudiante> estudiante { get; set; }
+            public Contexto() : base("ConStr")
+            {
 
-        public DbSet<InscripcionEntidades> inscripcion { get; set; }
-
-        public Contexto() : base("ConStr")
-        {
-
-        }
-   }
+            }
+    }
+    
 }
