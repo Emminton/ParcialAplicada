@@ -33,7 +33,6 @@ namespace Parrcial1_AP.BLL
                 db.Dispose();
             }
             return paso;
-
         }
 
         public static bool Modificar(Estudiante estudiante)
