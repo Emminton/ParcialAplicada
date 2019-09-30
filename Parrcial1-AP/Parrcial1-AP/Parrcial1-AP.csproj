@@ -67,11 +67,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Registro\Registro de evaluancion.cs">
+    <Compile Include="UI\Consulta\ConsultaDeEvaluacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Registro\Registro de evaluancion.Designer.cs">
-      <DependentUpon>Registro de evaluancion.cs</DependentUpon>
+    <Compile Include="UI\Consulta\ConsultaDeEvaluacion.Designer.cs">
+      <DependentUpon>ConsultaDeEvaluacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registro\RegistroDeEvaluancion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registro\RegistroDeEvaluancion.Designer.cs">
+      <DependentUpon>RegistroDeEvaluancion.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm1.resx">
       <DependentUpon>MainForm1.cs</DependentUpon>
@@ -85,8 +91,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\Registro\Registro de evaluancion.resx">
-      <DependentUpon>Registro de evaluancion.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Consulta\ConsultaDeEvaluacion.resx">
+      <DependentUpon>ConsultaDeEvaluacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registro\RegistroDeEvaluancion.resx">
+      <DependentUpon>RegistroDeEvaluancion.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -101,9 +110,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\Consulta\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

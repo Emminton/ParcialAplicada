@@ -8,11 +8,12 @@ using Parrcial1_AP.Entidades;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Parrcial1_AP.BLL
 {
-    public class EstudianteBLL
+    public class EstudianteBLL 
     {
-        public static bool Guardar(Estudiante estudiantes)
+        public static bool Guardar(Estudiantes estudiantes)
         {
             bool paso = false;
             Contexto db = new Contexto();
@@ -24,8 +25,9 @@ namespace Parrcial1_AP.BLL
                     paso = db.SaveChanges() > 0;
 
             }
-            catch (Exception)
+            catch (Exception )
             {
+                
                 throw;
             }
             finally
@@ -35,7 +37,7 @@ namespace Parrcial1_AP.BLL
             return paso;
         }
 
-        public static bool Modificar(Estudiante estudiante)
+        public static bool Modificar(Estudiantes estudiante)
         {
             bool paso = false;
             Contexto db = new Contexto();
@@ -69,9 +71,13 @@ namespace Parrcial1_AP.BLL
                 var eliminar = db.estudiante.Find(id);
                 db.Entry(eliminar).State = EntityState.Deleted;
                 paso = (db.SaveChanges() > 0);
+
+               
             }
+
             catch (Exception)
             {
+                
                 throw;
             }
             finally
@@ -80,10 +86,10 @@ namespace Parrcial1_AP.BLL
             }
             return paso;
         }
-        public static Estudiante Buscar(int id)
+        public static Estudiantes Buscar(int id)
         {
             Contexto db = new Contexto();
-            Estudiante estudiante = new Estudiante();
+            Estudiantes estudiante = new Estudiantes();
             try
             {
                 estudiante = db.estudiante.Find(id);
@@ -101,9 +107,10 @@ namespace Parrcial1_AP.BLL
             return estudiante;
 
         }
-        public static List<Estudiante> GetList(Expression<Func<Estudiante, bool>> estudiante)
+       
+        public static List<Estudiantes> GetList(Expression<Func<Estudiantes, bool>> estudiante)
         {
-            List<Estudiante> Lista = new List<Estudiante>();
+            List<Estudiantes> Lista = new List<Estudiantes>();
             Contexto db = new Contexto();
 
             try
@@ -122,5 +129,6 @@ namespace Parrcial1_AP.BLL
             return Lista;
         }
     }
+
 }
    

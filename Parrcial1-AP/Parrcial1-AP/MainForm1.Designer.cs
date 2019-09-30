@@ -31,13 +31,16 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.evaluarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.evaluarEstudianteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.evaluarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.evaluarToolStripMenuItem});
+            this.evaluarToolStripMenuItem,
+            this.consultarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -57,6 +60,22 @@
             this.evaluarEstudianteToolStripMenuItem.Name = "evaluarEstudianteToolStripMenuItem";
             this.evaluarEstudianteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.evaluarEstudianteToolStripMenuItem.Text = "Evaluar Estudiante";
+            this.evaluarEstudianteToolStripMenuItem.Click += new System.EventHandler(this.EvaluarEstudianteToolStripMenuItem_Click);
+            // 
+            // consultarToolStripMenuItem
+            // 
+            this.consultarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.evaluarToolStripMenuItem1});
+            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.consultarToolStripMenuItem.Text = "Consultar";
+            // 
+            // evaluarToolStripMenuItem1
+            // 
+            this.evaluarToolStripMenuItem1.Name = "evaluarToolStripMenuItem1";
+            this.evaluarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.evaluarToolStripMenuItem1.Text = "Evaluar";
+            this.evaluarToolStripMenuItem1.Click += new System.EventHandler(this.EvaluarToolStripMenuItem1_Click);
             // 
             // MainForm1
             // 
@@ -66,7 +85,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.Name = "MainForm1";
-            this.Text = "Form1";
+            this.Text = "Registro Para Evaluar Estudiantes";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -79,6 +98,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem evaluarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem evaluarEstudianteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem evaluarToolStripMenuItem1;
     }
 }
 

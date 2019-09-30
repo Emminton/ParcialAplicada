@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Parrcial1_AP.UI.Registro;
+using Parrcial1_AP.UI.Consulta;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +19,16 @@ namespace Parrcial1_AP
             InitializeComponent();
         }
 
+        private void EvaluarEstudianteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroEvaluancion estudiante = new  RegistroEvaluancion();
+            estudiante.Show();
+        }
+
+        private void EvaluarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultaDeEvaluacion evaluacion = new ConsultaDeEvaluacion();
+            evaluacion.Show();
+        }
     }
 }
